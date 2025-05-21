@@ -3,77 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorful Navbar with Dark Mode</title>
-  <style>
-    :root {
-      --bg-color-light: #ffffff;
-      --bg-color-dark: #1a1a1a;
-      --text-color-light: #000000;
-      --text-color-dark: #ffffff;
-    }
+  <title>pet pulse</title>
+  <link rel="stylesheet" href="new.css">
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color-light);
-      color: var(--text-color-light);
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    body.dark-mode {
-      background-color: var(--bg-color-dark);
-      color: var(--text-color-dark);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: white;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: opacity 0.3s;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.7;
-    }
-
-    .dark-toggle {
-      background: none;
-      border: 2px solid white;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body.dark-mode .dark-toggle {
-      border-color: #feca57;
-      color: #feca57;
-    }
-  </style>
 </head>
 <body>
 
