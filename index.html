@@ -27,7 +27,20 @@
 
 
   <div class="row">
-    hello
+    <div class="slider-container">
+    <button class="nav-btn left" onclick="scrollLeft()">&#10094;</button>
+
+    <div class="image-slider" id="slider">
+      <img src="img1.jpg" alt="Image 1">
+      <img src="img2.jpg" alt="Image 2">
+      <img src="img3.jpg" alt="Image 3">
+      <img src="img4.jpg" alt="Image 4">
+    </div>
+
+    <button class="nav-btn right" onclick="scrollRight()">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
   </div>
   <script>
     function toggleDarkMode() {
