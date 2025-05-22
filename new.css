@@ -67,4 +67,70 @@
       color: #feca57;
     }
 
-    
+    .pet-footer {
+  background: linear-gradient(45deg, #ffb347, #ffcc33, #ffb6c1);
+  color: #333;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+  gap: 2rem;
+}
+
+.footer-about h2 {
+  margin-bottom: 0.5rem;
+  color: #d35400;
+}
+
+.footer-about p {
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d35400;
+}
+
+.footer-social .social-icons a {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
