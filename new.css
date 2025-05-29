@@ -29,6 +29,12 @@
       color: white;
     }
 
+     .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -67,7 +73,7 @@
       color: #feca57;
     }
 
-    .pet-footer {
+  .pet-footer {
   background: linear-gradient(45deg, #ffb347, #ffcc33, #ffb6c1);
   color: #333;
   padding: 2rem 1rem 1rem;
