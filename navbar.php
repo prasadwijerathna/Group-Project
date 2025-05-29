@@ -76,7 +76,11 @@
   </style>
 </head>
 <body>
+  <?php
+function nav(){
+  
 
+?>
   <nav>
     <div class="logo"><strong>MySite</strong></div>
     <div class="nav-links">
@@ -98,6 +102,8 @@
       document.body.classList.toggle('dark-mode');
     }
   </script>
+
+  <?php }  ?>
 
 
 
