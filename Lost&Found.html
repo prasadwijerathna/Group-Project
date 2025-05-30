@@ -23,12 +23,14 @@
     }
 
     nav {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: white;
     }
 
     .logo {
@@ -37,36 +39,42 @@
       color: white;
     }
 
+
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      transition: all 0.3s ease;
+      font-weight: bold;
+      transition: opacity 0.3s;
     }
 
     .nav-links a:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-2px);
+      opacity: 0.7;
     }
-
-    .dark-toggle {
-      background: var(--accent-color);
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+   .dark-toggle {
+      background: none;
+      border: 2px solid white;
       color: white;
-      border: none;
       padding: 0.5rem 1rem;
-      border-radius: 20px;
+      border-radius: 5px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
     }
 
-    .dark-toggle:hover {
-      transform: scale(1.05);
+    body.dark-mode .dark-toggle {
+      border-color: #feca57;
+      color: #feca57;
     }
 
     .main-container {
@@ -193,27 +201,73 @@
     }
 
     .pet-footer {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      padding: 3rem 0 1rem;
-      margin-top: 4rem;
-    }
+  background: linear-gradient(45deg, #ffb347, #ffcc33, #ffb6c1);
+  color: #333;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+  gap: 2rem;
+}
 
-    .footer-bottom {
-      text-align: center;
-      padding: 1rem 0;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      margin-top: 2rem;
-    }
+.footer-about h2 {
+  margin-bottom: 0.5rem;
+  color: #d35400;
+}
+
+.footer-about p {
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d35400;
+}
+
+.footer-social .social-icons a {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
 
     .dark-mode {
       background: #1a1a1a;
@@ -251,30 +305,32 @@
 </head>
 <body>
   <nav>
-    <div class="logo"><strong>PetPulse</strong></div>
+     <div class="logo"><strong>PetPulse</strong></div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="channel.html">Animal Care</a>
-      <a href="#" style="background: rgba(255,255,255,0.2);">Lost & Found</a>
-      <a href="tranning.html">Training</a>
-      <a href="#">Mating</a>
+      <a href="Lost&Found.html">Lost & Found</a>
+      <a href="tranning.html">Tranning</a>
+      <a href="#">mating</a>
       <a href="#">Daycare</a>
-      <a href="#">Gallery</a>
+       <a href="#">Gallery</a>
       <a href="#">SignUp</a>
     </div>
-    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    
+    <button class="dark-toggle" onclick="toggleDarkMode()"> Dark Mode</button>
   </nav>
 
   <div class="main-container">
     <div class="page-header">
-      <h1>🐾 Lost & Found Pets</h1>
+      <h1>ð¾ Lost & Found Pets</h1>
       <p>Help reunite pets with their families</p>
     </div>
 
     <!-- Lost Pets Section -->
     <div class="section-card">
       <h2 class="section-title lost-title">
-        🔍 Lost Pets
+        ð Lost Pets
         <span style="font-size: 1rem; background: var(--primary-color); color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">3 Active</span>
       </h2>
       
@@ -287,7 +343,7 @@
               <p><strong>Last seen:</strong> Park Avenue, May 25th</p>
               <p><strong>Description:</strong> Friendly golden retriever, wearing blue collar</p>
               <p><strong>Age:</strong> 3 years old</p>
-              <div class="contact-info">📞 Contact: 071-234-5678</div>
+              <div class="contact-info">ð Contact: 071-234-5678</div>
             </div>
           </div>
         </div>
@@ -300,7 +356,7 @@
               <p><strong>Last seen:</strong> Main Street, May 24th</p>
               <p><strong>Description:</strong> White persian cat with blue eyes</p>
               <p><strong>Age:</strong> 2 years old</p>
-              <div class="contact-info">📞 Contact: 071-987-6543</div>
+              <div class="contact-info">ð Contact: 071-987-6543</div>
             </div>
           </div>
         </div>
@@ -315,7 +371,7 @@
               <p><strong>Last seen:</strong> Central Park, May 23rd</p>
               <p><strong>Description:</strong> Small brown and white mixed breed</p>
               <p><strong>Age:</strong> 1 year old</p>
-              <div class="contact-info">📞 Contact: 071-456-7890</div>
+              <div class="contact-info">ð Contact: 071-456-7890</div>
             </div>
           </div>
         </div>
@@ -325,7 +381,7 @@
     <!-- Found Pets Section -->
     <div class="section-card">
       <h2 class="section-title found-title">
-        ✅ Found Pets
+        â Found Pets
         <span style="font-size: 1rem; background: var(--success-color); color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">2 Waiting</span>
       </h2>
       
@@ -338,7 +394,7 @@
               <p><strong>Found on:</strong> Queen Street, May 26th</p>
               <p><strong>Description:</strong> Small black terrier, very friendly</p>
               <p><strong>Currently at:</strong> City Animal Shelter</p>
-              <div class="contact-info">📞 Contact: 071-111-2222</div>
+              <div class="contact-info">ð Contact: 071-111-2222</div>
             </div>
           </div>
         </div>
@@ -351,7 +407,7 @@
               <p><strong>Found on:</strong> Hill Road, May 27th</p>
               <p><strong>Description:</strong> Orange tabby cat, well-groomed</p>
               <p><strong>Currently at:</strong> Pet Care Clinic</p>
-              <div class="contact-info">📞 Contact: 071-333-4444</div>
+              <div class="contact-info">ð Contact: 071-333-4444</div>
             </div>
           </div>
         </div>
@@ -363,7 +419,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="report-form">
-            <h3>🚨 Report a Lost Pet</h3>
+            <h3>ð¨ Report a Lost Pet</h3>
             <form>
               <input type="text" class="form-control" placeholder="Pet Name">
               <input type="text" class="form-control" placeholder="Pet Type (Dog, Cat, etc.)">
@@ -379,7 +435,7 @@
         
         <div class="col-md-6">
           <div class="report-form" style="background: linear-gradient(135deg, var(--success-color), var(--secondary-color));">
-            <h3>🎉 Report a Found Pet</h3>
+            <h3>ð Report a Found Pet</h3>
             <form>
               <input type="text" class="form-control" placeholder="Pet Type (Dog, Cat, etc.)">
               <input type="text" class="form-control" placeholder="Breed (if known)">
@@ -397,43 +453,45 @@
   </div>
 
   <footer class="pet-footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h2>🐾 PetPulse</h2>
-        <p>Connecting lost pets with their families through our community-driven platform.</p>
-      </div>
-
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Services</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Gallery</a></li>
-          <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-social">
-        <h3>Emergency Contacts</h3>
-        <p>🚨 Animal Control: 071-HELP-PET</p>
-        <p>🏥 24/7 Vet Clinic: 071-VET-CARE</p>
-        <p>🏠 Animal Shelter: 071-SHELTER</p>
-      </div>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>ð¾ PetCare</h2>
+      <p>We care for your furry friends with love and joy. Visit us for grooming, training, and pet products!</p>
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 PetPulse. All rights reserved. 🐶🐱</p>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
-  </footer>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+        <a href="#"><img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 PetCare. All rights reserved. ð¶ð±</p>
+  </div>
+</footer>
 
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
       const toggle = document.querySelector('.dark-toggle');
       if (document.body.classList.contains('dark-mode')) {
-        toggle.innerHTML = '☀️ Light Mode';
+        toggle.innerHTML = 'âï¸ Light Mode';
       } else {
-        toggle.innerHTML = '🌙 Dark Mode';
+        toggle.innerHTML = 'ð Dark Mode';
       }
     }
 
