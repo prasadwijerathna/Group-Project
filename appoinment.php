@@ -99,3 +99,9 @@
       <option value="Dr. Abdul Ahamed">Dr. Abdul Ahamed</option>
     
     </select>
+        <a href="index.php"><button type="submit" name="submit">Book Appointment</button></a>
+    
+    <div class="success-message" id="successMessage">
+      ✅ Appointment Booked Successfully!
+    </div>
+  </form>
