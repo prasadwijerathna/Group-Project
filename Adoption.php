@@ -141,4 +141,15 @@
   </div>
 </footer> 
 </body>
+<script>
+     function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const toggle = document.querySelector('.dark-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+        toggle.innerHTML = '☀️ Light Mode';
+      } else {
+        toggle.innerHTML = '🌙 Dark Mode';
+      }
+    }
+  </script>
 </html>
