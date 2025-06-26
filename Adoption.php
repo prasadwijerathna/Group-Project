@@ -5,6 +5,7 @@
   <title>Dog & Puppy Adoption</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="new.css" rel="stylesheet">
   <style>
     body {
       background-color: #f8f9fa;
@@ -45,50 +46,27 @@
 </head>
 <body>
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="#">
-      <img src="https://placehold.co/40x40" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-      PetPulse
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Adopt</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Find a Pet</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pet Care</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Donate</a>
-        </li>
-      </ul>
-      <a href="#" class="btn btn-primary ms-lg-3">Sign In</a>
+  <nav>
+    <div class="logo"><strong>PetPulse</strong></div>
+    <div class="nav-links">
+      <a href="index.php">Home</a>
+      <a href="channel.php">Animal Care</a>
+      <a href="Lost&Found.php">Lost & Found</a>
+      <a href="tranning.php">Tranning</a>
+      <a href="adoption.php">mating</a>
+      <a href="daycare.php">Daycare</a>
+       <a href="gallery.php">Gallery</a>
+      <a href="singup.php">SignUp</a>
     </div>
-  </div>
-</nav>
+
+    
+    <button class="dark-toggle" onclick="toggleDarkMode()"> Dark Mode</button>
+  </nav>
+
+  <main style="padding: 2rem;"></main>
 <!-- Navbar End -->
 
-<div class="container mt-5">
-  <!-- Breadcrumb -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Dogs and Puppies</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Dog Adoption</li>
-    </ol>
-  </nav>
+
 
   <!-- Page Heading -->
   <h2 class="fw-bold mb-4">Dog & Puppy Adoption</h2>
@@ -118,12 +96,12 @@
     <div class="col-md-4">
       <div class="right-box">
         <div class="d-flex justify-content-center gap-2 mb-2">
-          <img src="https://place-puppy.com/80x80" alt="Dog 1">
-          <img src="https://place-puppy.com/81x81" alt="Dog 2" style="border: 2px solid #00c2ff;">
+          <img src="image/adopt/1.jpg" alt="Dog 1">
+          <img src="image/adopt/2.jpg" alt="Dog 2" style="border: 2px solid #00c2ff;">
         </div>
         <h5 class="fw-semibold">Find your best match</h5>
         <p class="text-muted">It only takes 60 seconds.</p>
-        <a href="#" class="btn btn-purple w-100" style="background-color: #8000ff; color: #fff;">GET STARTED</a>
+        <a href="matfrom.php" class="btn btn-purple w-100" style="background-color: #8000ff; color: #fff;">GET STARTED</a>
       </div>
     </div>
   </div>
@@ -131,5 +109,36 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<footer class="pet-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>🐾 PetCare</h2>
+      <p>We care for your furry friends with love and joy. Visit us for grooming, training, and pet products!</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+        <a href="#"><img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 PetCare. All rights reserved. 🐶🐱</p>
+  </div>
+</footer> 
 </body>
 </html>
