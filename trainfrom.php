@@ -5,6 +5,8 @@
   background-color: #fff8f0;
   padding: 30px;
   margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   </style>
