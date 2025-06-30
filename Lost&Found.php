@@ -301,38 +301,38 @@
         color: white;
       }
 
-      @media (max-width: 768px) {
-        .nav-links {
-          display: none;
-        }
-
-        .page-header h1 {
-          font-size: 2rem;
-        }
-
-        .pet-card {
-          text-align: center;
-        }
-
-        .pet-image {
-          margin: 0 0 1rem 0;
-        }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
       }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo"><strong>PetPulse</strong></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="channel.html">Animal Care</a>
-        <a href="Lost&Found.html">Lost & Found</a>
-        <a href="tranning.html">Tranning</a>
-        <a href="#">mating</a>
-        <a href="#">Daycare</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="singup.html">SignUp</a>
-      </div>
+      
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      
+      .pet-card {
+        text-align: center;
+      }
+      
+      .pet-image {
+        margin: 0 0 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+     <div class="logo"><strong>PetPulse</strong></div>
+    <div class="nav-links">
+ <a href="index.php">Home</a>
+      <a href="channel.php">Animal Care</a>
+      <a href="Lost&Found.php">Lost & Found</a>
+      <a href="tranning.php">Tranning</a>
+      <a href="adoption.php">mating</a>
+      <a href="daycare.php">Daycare</a>
+       <a href="gallery.php">Gallery</a>
+      <a href="singup.php">SignUp</a>
+    </div>
 
       <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
     </nav>
@@ -481,100 +481,107 @@
         </div>
       </div>
 
-      <!-- Report Form Section -->
-      <div class="section-card">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="report-form">
-              <h3>🚨 Report a Lost Pet</h3>
-              <form>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Pet Name"
-                />
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Pet Type (Dog, Cat, etc.)"
-                />
-                <input type="text" class="form-control" placeholder="Breed" />
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Last Seen Location"
-                />
-                <input type="date" class="form-control" />
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Description & Special Features"
-                ></textarea>
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="Your Phone Number"
-                />
-                <button type="submit" class="btn btn-custom">
-                  Report Lost Pet
-                </button>
-              </form>
-            </div>
+    <!-- Report Form Section -->
+    <div class="section-card">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="report-form">
+            <h3>🚨 Report a Lost Pet</h3>
+            <form method="post">
+              <input type="text" class="form-control" placeholder="Pet Name" name="petname">
+              <input type="text" class="form-control" placeholder="Pet Type (Dog, Cat, etc.)" name="pet-type">
+              <input type="text" class="form-control" placeholder="Breed" name="breed">
+         
+        
+              <input type="text" class="form-control" placeholder="Last Seen Location" name="location">
+              <input type="date" class="form-control" name="date">
+              <textarea class="form-control" rows="3" placeholder="Description & Special Features" name="message"></textarea>
+              <input type="tel" class="form-control" placeholder="Your Phone Number" name="phone-no">
+              <input type="file" id="petPhoto" name="petPhoto" accept="image/*" required/ name="image"><p></p>
+              <button type="submit" class="btn btn-custom" name="lost">Report Lost Pet</button>
+            </form>
           </div>
-
-          <div class="col-md-6">
-            <div
-              class="report-form"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  var(--success-color),
-                  var(--secondary-color)
-                );
-              "
-            >
-              <h3>🎉 Report a Found Pet</h3>
-              <form>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Pet Type (Dog, Cat, etc.)"
-                />
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Breed (if known)"
-                />
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Found Location"
-                />
-                <input type="date" class="form-control" />
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Description & Condition"
-                ></textarea>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Current Location/Shelter"
-                />
-                <input
-                  type="tel"
-                  class="form-control"
-                  placeholder="Your Phone Number"
-                />
-                <button type="submit" class="btn btn-custom">
-                  Report Found Pet
-                </button>
-              </form>
-            </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="report-form" style="background: linear-gradient(135deg, var(--success-color), var(--secondary-color));">
+            <h3>🎉 Report a Found Pet</h3>
+            <form method="POST" action="lost&found.php" >
+              <input type="text" class="form-control" placeholder="Pet Type (Dog, Cat, etc.)" name="pettype">
+              <input type="text" class="form-control" placeholder="Breed (if known)" name="breed">
+              <input type="text" class="form-control" placeholder="Found Location" name="location">
+              <input type="date" class="form-control" name="date">
+              <textarea class="form-control" rows="3" placeholder="Description & Condition" name="msg"></textarea>
+              <input type="text" class="form-control" placeholder="Current Location/Shelter" name="current">
+              <input type="tel" class="form-control" placeholder="Your Phone Number" name="phone">
+              <button type="submit" class="btn btn-custom" name="submit">Report Found Pet</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+
+<?php
+  //lost part
+include "admin.php";
+
+if(isset($_POST['lost'])){
+$petname = $_POST['petname'];
+$pettype = $_POST['pet-type'];
+$breed = $_POST['breed'];
+$location = $_POST['location'];
+$date = $_POST['date'];
+$msg = $_POST['msg'];
+$phoneno = $_POST['phone-no'];
+$image = $_POST['image'];
+
+// Insert data
+$sql = "INSERT INTO lost( pet_name,  pet_type,breed,last_location,date,message,telephone,image) VALUES ('$petname','$pettype', 
+'$breed', '$location','$date','$msg','$phoneno','$image')";
+$rst=mysqli_query($conn,$sql);
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record added successfully!";
+} else {
+
+}
+
+$conn->close();
+}
+?>
+
+  <?php
+  //found part
+include "admin.php";
+
+if(isset($_POST['submit'])){
+$pettype = $_POST['pettype'];
+$breed = $_POST['breed'];
+$location = $_POST['location'];
+$date = $_POST['date'];
+$msg = $_POST['msg'];
+$current = $_POST['current'];
+$phone = $_POST['phone'];
+
+// Insert data
+$sql = "INSERT INTO found (pet_type, breed,location,found_date,message,current_location,telephone) VALUES ('$pettype', 
+'$breed', '$location','$date','$msg','$current','$phone')";
+$rst=mysqli_query($conn,$sql);
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record added successfully!";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+}
+?>
+
+
+
 
     <footer class="pet-footer">
       <div class="footer-container">
@@ -623,39 +630,16 @@
       </div>
     </footer>
 
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-        const toggle = document.querySelector(".dark-toggle");
-        if (document.body.classList.contains("dark-mode")) {
-          toggle.innerHTML = "☀️ Light Mode";
-        } else {
-          toggle.innerHTML = "🌙 Dark Mode";
-        }
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const toggle = document.querySelector('.dark-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+        toggle.innerHTML = '☀️ Light Mode';
+      } else {
+        toggle.innerHTML = '🌙 Dark Mode';
       }
-
-      // Add some interactivity
-      document.addEventListener("DOMContentLoaded", function () {
-        const petCards = document.querySelectorAll(".pet-card");
-        petCards.forEach((card) => {
-          card.addEventListener("click", function () {
-            this.style.transform = "scale(1.02)";
-            setTimeout(() => {
-              this.style.transform = "translateX(5px)";
-            }, 150);
-          });
-        });
-
-        // Form submission handlers
-        const forms = document.querySelectorAll("form");
-        forms.forEach((form) => {
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("Thank you for your report! We will contact you soon.");
-            this.reset();
-          });
-        });
-      });
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>
