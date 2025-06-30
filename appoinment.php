@@ -105,3 +105,9 @@
       ✅ Appointment Booked Successfully!
     </div>
   </form>
+
+  <?php
+
+include "admin.php";
+
+?>
