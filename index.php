@@ -14,14 +14,18 @@
   <nav>
     <div class="logo"><strong>PetPulse</strong></div>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="channel.html">Animal Care</a>
-      <a href="Lost&Found.html">Lost & Found</a>
-      <a href="tranning.html">Tranning</a>
-      <a href="#">mating</a>
-      <a href="#">Daycare</a>
-       <a href="gallery.html">Gallery</a>
-      <a href="singup.html">SignUp</a>
+
+      <a href="index.php">Home</a>
+      <a href="channel.php">Animal Care</a>
+      <a href="Lost&Found.php">Lost & Found</a>
+      <a href="tranning.php">Tranning</a>
+      <a href="adoption.php">mating</a>
+      <a href="daycare.php">Daycare</a>
+       <a href="gallery.php">Gallery</a>
+      <a href="singup.php">SignUp</a>
+      
+      <a href="https://www.chatbase.co/chatbot-iframe/T4Pz_vQcuKlP_LMoBULzI"> help </a>
+
     </div>
 
     
@@ -42,9 +46,53 @@
     </p>
   </div>
 </section>
+<div class="row">
+  
+  <main style="padding: 2rem;">
+
+    <p></p>
+    <!-- Our Services Section -->
+<section class="services-section">
+  <h2>Our Services</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <h3>Animal Care</h3>
+      <p>Comprehensive health check-ups and personalized treatment for your beloved pets.</p>
+    </div>
+    <div class="service-card">
+      <h3>Lost & Found</h3>
+      <p>Helping reunite lost pets with their families through community alerts and tracking.</p>
+    </div>
+    <div class="service-card">
+      <h3>Training</h3>
+      <p>Fun and effective obedience training programs for pets of all ages.</p>
+    </div>
+    <div class="service-card">
+      <h3>Mating Services</h3>
+      <p>Safe and responsible breeding guidance under expert supervision.</p>
+    </div>
+    <div class="service-card">
+      <h3>Daycare</h3>
+      <p>Safe, fun, and social daycare environment while you’re away.</p>
+    </div>
+    <div class="service-card">
+      <h3>Gallery</h3>
+      <p>Explore happy moments, success stories, and pet transformations!</p>
+    </div>
+  </div>
 
 <!-- CSS Styling -->
 <style>
+  nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it's above all content */
+  background-color: #0077b6; /* optional, for visibility */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* optional, adds depth */
+}
+
   .about-section {
     background: linear-gradient(to right, #ffecd2, #fcb69f);
     color: #333;
@@ -133,40 +181,7 @@
       }
     }
   </script>
-<div class="row">
-  
-  <main style="padding: 2rem;">
 
-    <p></p>
-    <!-- Our Services Section -->
-<section class="services-section">
-  <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="service-card">
-      <h3>Animal Care</h3>
-      <p>Comprehensive health check-ups and personalized treatment for your beloved pets.</p>
-    </div>
-    <div class="service-card">
-      <h3>Lost & Found</h3>
-      <p>Helping reunite lost pets with their families through community alerts and tracking.</p>
-    </div>
-    <div class="service-card">
-      <h3>Training</h3>
-      <p>Fun and effective obedience training programs for pets of all ages.</p>
-    </div>
-    <div class="service-card">
-      <h3>Mating Services</h3>
-      <p>Safe and responsible breeding guidance under expert supervision.</p>
-    </div>
-    <div class="service-card">
-      <h3>Daycare</h3>
-      <p>Safe, fun, and social daycare environment while you’re away.</p>
-    </div>
-    <div class="service-card">
-      <h3>Gallery</h3>
-      <p>Explore happy moments, success stories, and pet transformations!</p>
-    </div>
-  </div>
 </section>
 
 <!-- CSS Styling -->
@@ -227,7 +242,7 @@
     }
   }
 </style>
-
+<p></p>
 <div class="row">
   <footer class="pet-footer">
   <div class="footer-container">
