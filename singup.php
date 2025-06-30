@@ -142,7 +142,6 @@
     }
   </style>
 </head>
-
 <body><br>
   <div class="signup-container">
     <div class="left">
@@ -151,7 +150,8 @@
 
     <div class="right">
       <h2>Create Your Account</h2><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <form id="signupForm" enctype="multipart/form-data">
+    <form id="signupForm" method="POST" action="singup.php" >
+
         <label for="ownerName">Owner Name</label>
         <input type="text" id="ownerName" name="ownerName" required />
 
@@ -166,6 +166,13 @@
           <option value="cat">Cat</option>
         </select>
 
+           <label for="usertype">user type</label>
+        <select id="usertype" name="usertype" required>
+          <option value="">-- Select --</option>
+          <option value="petowner">Pet owner</option>
+          <option value="doctor">Doctor</option>
+          <option value="trainer">Trainer</option>
+        </select>
         <label for="age">Age (Years)</label>
         <input
           type="number"
@@ -196,41 +203,52 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
 
-        <label for="confirmPassword">Confirm Password</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          required
-        />
-
-        <button type="submit">Sign Up</button>
+        <button type="submit" name="submit">SignUp</button>
 
         <div class="footer-text">
           Already have an account?
-          <a href="login.html">Log in</a>
+          <a href="login.php">Log in</a>
         </div>
       </form>
     </div>
   </div>
 
-  <script>
-    document.getElementById('signupForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+<?php
 
-      const pwd = document.getElementById('password').value;
-      const confirmPwd = document.getElementById('confirmPassword').value;
+include "admin.php";
 
-      if (pwd !== confirmPwd) {
-        alert('Passwords do not match!');
-        return;
-      }
+// Get data from form
 
-      // Here you can handle form submission, e.g., send data to backend
-      alert('🎉 Account created successfully!');
+if(isset($_POST['submit'])){
+$ownername = $_POST['ownerName'];
+$petname = $_POST['petName'];
+$category = $_POST['petCategory'];
+$usertype = $_POST['usertype'];
+$age = $_POST['age'];
+$breed = $_POST['breed'];
+$petphoto = $_POST['petPhoto'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-      this.reset();
-    });
-  </script>
+
+// Insert data
+
+$sql = "INSERT INTO petusers(owner_name,pet_name,pet_category,user_type, age, breed,pet_photo,email,password) VALUES ('$ownername ', '$petname', 
+'$category','$usertype','$age','$breed','$petphoto','$email','$password');";
+$rst=mysqli_query($conn,$sql);
+ // var_dump($sql);
+if($rst){
+  echo "Record added successfully!";
+}else {
+ 
+}
+
+$conn->close();
+
+}
+
+?>
+
 </body>
 </html>
+
