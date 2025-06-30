@@ -1,3 +1,21 @@
+<?php 
+session_start();
+$tmp = $_SESSION['username'];
+
+
+
+  if(isset($_POST['appointment'])){
+  if(!empty($_SESSION)){
+    // header('Location:appoinment.php');
+    echo "<script>window.location.href='appoinment.php';</script>";
+    }
+    else{
+     header('Location:login.php'); 
+    }
+ 
+  }
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +30,17 @@
 <body>
  <nav>
     <div class="logo"><strong>PetPulse</strong></div>
-     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="channel.html">Animal Care</a>
-      <a href="Lost&Found.html">Lost & Found</a>
-      <a href="tranning.html">Tranning</a>
-      <a href="#">mating</a>
-      <a href="#">Daycare</a>
-       <a href="gallery.html">Gallery</a>
-      <a href="singup.html">SignUp</a>
+
+    <div class="nav-links">
+      <a href="index.php">Home</a>
+      <a href="channel.php">Animal Care</a>
+      <a href="Lost&Found.php">Lost & Found</a>
+      <a href="tranning.php">Tranning</a>
+      <a href="adoption.php">mating</a>
+      <a href="daycare.php">Daycare</a>
+       <a href="gallery.php">Gallery</a>
+      <a href="singup.php">SignUp</a>
+
     </div>
     <button class="dark-toggle" onclick="toggleDarkMode()"> Dark Mode</button>
   </nav>
@@ -111,8 +131,15 @@ Surgeries are conducted in a sterile, fully equipped, and state-of-the-art theat
   </main>
 </div>
 
-<a href="doctor.html"><button type="button" class="btn btn-primary btn-sm">Meet Doctors</button></a>
-<a href="appoinment.html"><button type="button" class="btn btn-secondary btn-sm">Book Appoinment</button></a>
+<form method="POST" >
+  <a href="doctor.php"><button type="button" class="btn btn-primary btn-sm">Meet Doctors</button></a>
+  <button type="submit" name="appointment" class="btn btn-secondary btn-sm">Book Appoinment</button>
+
+</form>
+
+
+<!-- 
+<a href="appoinment.php"></a> -->
 <br><br>
  <footer class="pet-footer">
   <div class="footer-container">
@@ -147,3 +174,7 @@ Surgeries are conducted in a sterile, fully equipped, and state-of-the-art theat
 </footer> 
 </body>
 </html>
+
+<?php  
+
+?>
