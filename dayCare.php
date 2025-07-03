@@ -10,7 +10,7 @@
       background: url('https://images.unsplash.com/photo-1543852786-1cf6624b9987') no-repeat center center/cover;
       height: 100vh;
       font-family: 'Segoe UI', sans-serif;
-    }
+    } 
     .search-box {
       background-color: rgba(255, 255, 255, 0.95);
       padding: 30px;
