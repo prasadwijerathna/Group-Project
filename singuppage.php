@@ -215,4 +215,17 @@
 
 </body>
 </html>
+include "admin.php";
 
+// Get data from form
+
+if(isset($_POST['submit'])){
+$ownername = $_POST['ownerName'];
+$petname = $_POST['petName'];
+$category = $_POST['petCategory'];
+$usertype = $_POST['usertype'];
+$age = $_POST['age'];
+$breed = $_POST['breed'];
+$petphoto = $_POST['petPhoto'];
+$email = $_POST['email'];
+$password = $_POST['password'];
