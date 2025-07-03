@@ -15,20 +15,6 @@
       height: 100vh;
     }
 
-    .appointment-form {
-      background-color: white;
-      border-radius: 15px;
-      padding: 2rem;
-      width: 100%;
-      max-width: 450px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .appointment-form h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2c3e50;
-    }
 
     .appointment-form label {
       display: block;
