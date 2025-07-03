@@ -19,6 +19,13 @@
     }
 
     nav {
+        position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it's above all content */
+  background-color: #0077b6; /* optional, for visibility */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* optional, adds depth */
       display: flex;
       justify-content: space-between;
       align-items: center;
