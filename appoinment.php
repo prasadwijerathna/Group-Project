@@ -15,6 +15,20 @@
       height: 100vh;
     }
 
+    .appointment-form {
+      background-color: white;
+      border-radius: 15px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .appointment-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
 
     .appointment-form label {
       display: block;
@@ -85,15 +99,49 @@
       <option value="Dr. Abdul Ahamed">Dr. Abdul Ahamed</option>
     
     </select>
-        <a href="index.php"><button type="submit" name="submit">Book Appointment</button></a>
+
+    <a href="index.php"><button type="submit" name="submit">Book Appointment</button></a>
     
     <div class="success-message" id="successMessage">
       ✅ Appointment Booked Successfully!
     </div>
   </form>
-
-  <?php
+<?php
 
 include "admin.php";
 
+if(isset($_POST['submit'])){
+$fullname = $_POST['fullName'];
+$email = $_POST['email'];
+$appoinment_date = $_POST['date'];
+$time = $_POST['time'];
+$state = $_POST['state'];
+$doctorname = $_POST['department'];
+
+// Insert data
+
+$sql = "INSERT INTO doctor(full_name,email,appoinment_date,time, state,doctor_name)VALUES ('$fullname', '$email', 
+'$appoinment_date','$time','$state ','$doctorname');";
+ $rst=mysqli_query($conn,$sql);
+ // var_dump($sql);
+if($rst){
+  echo "Record added successfully!";
+  header("Location:index.php");
+}else {
+ 
+}
+
+$conn->close();
+
+}
+
 ?>
+  <!-- <script>
+    document.getElementById('doctorForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('successMessage').style.display = 'block';
+    });
+  </script> -->
+
+</body>
+</html>
