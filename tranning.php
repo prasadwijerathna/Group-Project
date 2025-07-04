@@ -13,15 +13,17 @@
 
   <nav>
     <div class="logo"><strong>PetPulse</strong></div>
-      <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="channel.html">Animal Care</a>
-      <a href="Lost&Found.html">Lost & Found</a>
-      <a href="tranning.html">Tranning</a>
-      <a href="#">mating</a>
-      <a href="#">Daycare</a>
-       <a href="gallery.html">Gallery</a>
-      <a href="singup.html">SignUp</a>
+
+    <div class="nav-links">
+      <a href="index.php">Home</a>
+      <a href="channel.php">Animal Care</a>
+      <a href="Lost&Found.php">Lost & Found</a>
+      <a href="tranning.php">Tranning</a>
+      <a href="adoption.php">mating</a>
+      <a href="daycare.php">Daycare</a>
+       <a href="gallery.php">Gallery</a>
+      <a href="singup.php">SignUp</a>
+
     </div>
 
     
@@ -137,7 +139,7 @@ footer button {
   </section>
 
   <footer>
-    <button onclick="alert('Contact us to book a session!')">Book a Session</button>
+    <a href="trainfrom.php"><button onclick="alert('Contact us to book a session!')">Book a Session</button></a>
   </footer>
 </body>
 
@@ -174,7 +176,17 @@ footer button {
     <p>&copy; 2025 PetCare. All rights reserved. 🐶🐱</p>
   </div>
 </footer>
-
+<script>
+     function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const toggle = document.querySelector('.dark-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+        toggle.innerHTML = '☀️ Light Mode';
+      } else {
+        toggle.innerHTML = '🌙 Dark Mode';
+      }
+    }
+  </script>
 </div>
 </body>
 </html>
