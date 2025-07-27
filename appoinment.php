@@ -40,7 +40,7 @@
     .appointment-form select,
     .appointment-form button {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.76rem;
       margin-bottom: 1.2rem;
       border: 1px solid #ccc;
       border-radius: 8px;
