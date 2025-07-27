@@ -235,3 +235,19 @@ $password = $_POST['password'];
 $sql = "INSERT INTO petusers(owner_name,pet_name,pet_category,user_type, age, breed,pet_photo,email,password) VALUES ('$ownername ', '$petname', 
 '$category','$usertype','$age','$breed','$petphoto','$email','$password');";
 $rst=mysqli_query($conn,$sql);
+
+ // var_dump($sql);
+if($rst){
+  echo "Record added successfully!";
+}else {
+ 
+}
+
+$conn->close();
+
+}
+
+?>
+
+</body>
+</html>
