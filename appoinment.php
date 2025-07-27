@@ -81,10 +81,10 @@
     <label for="email">Email</label>
     <input type="email" name="email" required>
 
-    <label for="date">Appointment Date</label>
+    <label for="date">Appointment Date </label>
     <input type="date" name="date" required>
 
-    <label for="time">Time</label>
+    <label for="time">Time </label>
     <input type="time" name="time" required>
 
     
