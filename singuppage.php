@@ -229,3 +229,9 @@ $breed = $_POST['breed'];
 $petphoto = $_POST['petPhoto'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+
+// Insert data
+
+$sql = "INSERT INTO petusers(owner_name,pet_name,pet_category,user_type, age, breed,pet_photo,email,password) VALUES ('$ownername ', '$petname', 
+'$category','$usertype','$age','$breed','$petphoto','$email','$password');";
+$rst=mysqli_query($conn,$sql);
